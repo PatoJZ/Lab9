@@ -17,7 +17,7 @@ class BinaryTree
 private:
     Node* root;
 
-    // Método privado para insertar un valor en el árbol recursivamente
+    // Método privado
     Node* insertRecursive(Node* currentNode, int value)
     {
         if (currentNode == NULL)
@@ -37,8 +37,8 @@ private:
         return currentNode;
     }
 
-    // Método privado para buscar un valor en el árbol recursivamente
-    bool searchRecursive(Node* currentNode, int value) const
+    // Método 
+    bool searchRecursive(Node* currentNode, int value) 
     {
         if (currentNode == NULL)
         {
@@ -59,8 +59,8 @@ private:
         }
     }
 
-    // Método privado para imprimir el árbol en orden recursivamente
-    void printInOrderRecursive(Node* currentNode) const
+    // Método para imprimir
+    void printInOrderRecursive(Node* currentNode) 
     {
         if (currentNode == NULL)
         {
@@ -76,20 +76,20 @@ public:
     // Constructor
     BinaryTree() : root(NULL) {}
 
-    // Método público para insertar un valor en el árbol
+    // Insertar un valor en el árbol
     void insert(int value)
     {
         root = insertRecursive(root, value);
     }
 
-    // Método público para buscar un valor en el árbol
-    bool search(int value) const
+    // Buscar un valor en el árbol
+    bool search(int value) 
     {
         return searchRecursive(root, value);
     }
 
-    // Método público para imprimir el árbol en orden
-    void printInOrder() const
+    // Imprimir el árbol en orden
+    void printInOrder() 
     {
         printInOrderRecursive(root);
         cout << endl;
@@ -109,7 +109,7 @@ int main()
     tree.insert(4);
 
     // Imprimir el árbol en orden
-    cout << "Árbol en orden: ";
+    cout << "Arbol en orden: ";
     tree.printInOrder();
 
     // Buscar elementos en el árbol

@@ -6,8 +6,7 @@ public:
     int data;
     Node* next;
 
-    // Constructor del nodo
-    Node(int value);
+    Node(int value): data(value), next(NULL) {}
 };
 class LinkedList
 {
@@ -38,12 +37,11 @@ public:
 
         if (head == NULL)
         {
-            // Si la lista está vacía, el nuevo nodo será el primero
             head = newNode;
         }
         else
         {
-            // Si la lista no está vacía, buscar el último nodo y enlazarlo al nuevo nodo
+
             Node* current = head;
             while (current->next != NULL)
             {
@@ -61,11 +59,11 @@ public:
         {
             if (current->data == value)
             {
-                return true; // El elemento fue encontrado
+                return true;
             }
             current = current->next;
         }
-        return false; // El elemento no fue encontrado
+        return false;
     }
 
     // Método para eliminar un elemento de la lista
@@ -73,12 +71,12 @@ public:
     {
         if (head == NULL)
         {
-            return; // La lista está vacía, no hay nada que eliminar
+            return;
         }
 
         if (head->data == value)
         {
-            // El elemento a eliminar es el primero de la lista
+
             Node* temp = head;
             head = head->next;
             delete temp;
@@ -93,7 +91,7 @@ public:
 
         if (current->next != NULL)
         {
-            // El elemento a eliminar se encuentra en el medio de la lista
+
             Node* temp = current->next;
             current->next = current->next->next;
             delete temp;
@@ -115,7 +113,7 @@ public:
 
 int main()
 {
-    // Crear una lista enlazada
+
     LinkedList MiLista;
 
     // Insertar elementos
@@ -124,13 +122,20 @@ int main()
     MiLista.insert(3);
 
     // Imprimir la lista
-    MiLista.print(); // Output: 5 10 3
+    cout << "Lista: ";
+    MiLista.print();
 
     // Buscar elementos
-    cout << MiLista.search(10) << endl; // Output: 1 (true)
-    cout << MiLista.search(7) << endl;  // Output: 0 (false)
+    cout << "Buscar 10: " << (MiLista.search(10) ? "Encontrado" : "No encontrado") << endl;
+    cout << "Buscar 8: " << (MiLista.search(8) ? "Encontrado" : "No encontrado") << endl;
+
 
     // Eliminar elementos
     MiLista.remove(10);
+    cout << "Elemento 10 removido" << endl;
+
+    cout << "Lista Actualizada: ";
+    MiLista.print();
+    
     return 0;
 }

@@ -13,7 +13,7 @@ public:
     // Constructor
     Point(double xCoord, double yCoord) : x(xCoord), y(yCoord) {}
 
-    // Métodos para obtener las coordenadas X e Y
+    // Obtener las coordenadas X e Y
     double getX() 
     {
         return x;

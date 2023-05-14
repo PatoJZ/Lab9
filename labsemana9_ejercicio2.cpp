@@ -12,7 +12,7 @@ public:
     // Constructor
     Point(double xCoord, double yCoord) : x(xCoord), y(yCoord) {}
 
-    // Métodos para obtener las coordenadas x e y
+    // Obtener las coordenadas x e y
     double getX() 
     {
         return x;
@@ -23,7 +23,7 @@ public:
         return y;
     }
 
-    // Métodos para establecer las coordenadas x e y
+    // Establecer las coordenadas x e y
     void setX(double xCoord)
     {
         x = xCoord;

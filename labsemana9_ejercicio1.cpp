@@ -12,31 +12,31 @@ public:
     // Constructor
     Rectangle(double w, double h) : width(w), height(h) {}
 
-    // Método para obtener el ancho
+    // obtener el ancho
     double getWidth() 
     {
         return width;
     }
 
-    // Método para obtener la altura
+    // obtener la altura
     double getHeight() 
     {
         return height;
     }
 
-    // Método para establecer el ancho
+    // Establecer el ancho
     void setWidth(double w)
     {
         width = w;
     }
 
-    // Método para establecer la altura
+    // Establecer la altura
     void setHeight(double h)
     {
         height = h;
     }
 
-    // Método para calcular el área
+    // Calcular el área
     double calculateArea() 
     {
         return width * height;
@@ -58,7 +58,7 @@ int main()
 
     // Calcular y mostrar el área
     double area = rect.calculateArea();
-    cout << "Área: " << area << endl;
+    cout << "Area: " << area << endl;
 
     return 0;
 }
